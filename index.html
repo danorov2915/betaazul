@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Azul - Tarjeta Digital | Daniel Ortuño Oviedo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+        .card-container {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card-header {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .tagline {
+            font-size: 13px;
+            opacity: 0.9;
+            letter-spacing: 1px;
+        }
+        .card-body {
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .profile-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+        .profile-title {
+            font-size: 14px;
+            color: #0284c7;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #1e293b;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .btn:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
+        }
+        .btn-whatsapp {
+            background: #25d366;
+            color: white;
+            border-color: #25d366;
+        }
+        .btn-whatsapp:hover {
+            background: #22bf5b;
+            border-color: #22bf5b;
+        }
+        .btn-call {
+            background: #0284c7;
+            color: white;
+            border-color: #0284c7;
+        }
+        .btn-call:hover {
+            background: #0369a1;
+            border-color: #0369a1;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #475569;
+            font-weight: bold;
+            font-size: 14px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .social-icon:hover {
+            background: #0284c7;
+            color: white;
+            border-color: #0284c7;
+        }
+        .qr-section {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 16px;
+            border: 1px dashed #cbd5e1;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .qr-section img {
+            width: 130px;
+            height: 130px;
+            display: block;
+            margin: 0 auto 8px auto;
+        }
+        .qr-text {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .footer {
+            background: #f1f5f9;
+            padding: 12px;
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-header">
+            <div class="logo">Beta Azul</div>
+            <div class="tagline">Agencia de Viajes Digital</div>
+        </div>
+        <div class="card-body">
+            <div class="profile-name">Daniel Ortuño Oviedo</div>
+            <div class="profile-title">Fundador & Asesor de Viajes</div>
+            
+            <div class="btn-group">
+                <a href="tel:+52 244 447 0237" class="btn btn-call">
+                    📞 Llamar Directamente
+                </a>
+                <a href="https://wa.me/522444470237?text=Hola Daniel, vi la tarjeta digital de Beta Azul y me interesa información sobre sus paquetes de viaje." class="btn btn-whatsapp" target="_blank">
+                    💬 Enviar WhatsApp
+                </a>
+            </div>
+
+            <div class="social-links">
+                <a href="https://facebook.com" class="social-icon" target="_blank" title="Facebook">FB</a>
+                <a href="https://instagram.com" class="social-icon" target="_blank" title="Instagram">IG</a>
+                <a href="https://tiktok.com" class="social-icon" target="_blank" title="TikTok">TK</a>
+                <a href="https://youtube.com" class="social-icon" target="_blank" title="YouTube">YT</a>
+            </div>
+
+            <div class="qr-section">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://betaazul.com/daniel" alt="Código QR de la tarjeta">
+                <div class="qr-text">Escanea para compartir tarjeta</div>
+            </div>
+        </div>
+        <div class="footer">
+            Atlixco, Puebla, México • 100% Digital
+        </div>
+    </div>
+</body>
+</html>
