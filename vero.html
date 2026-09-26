@@ -12,205 +12,253 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #050E22 0%, #0A1931 100%);
+            background: radial-gradient(circle at center, #0a1931 0%, #050e22 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 16px;
-            color: #0A1931;
+            padding: 10px;
+            color: #fff;
         }
-        .card-container {
+        .phone-frame {
             width: 100%;
-            max-width: 380px;
-            background: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 28px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,106,0.35);
+            max-width: 400px;
+            min-height: 750px;
+            background: linear-gradient(180deg, #0b1c3a 0%, #060f24 50%, #020611 100%);
+            border-radius: 36px;
+            box-shadow: 0 30px 90px rgba(0,0,0,0.8), inset 0 0 0 2px rgba(212,175,55,0.4);
             overflow: hidden;
             position: relative;
-            animation: fadeIn 0.8s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .card-header {
-            background: linear-gradient(135deg, #0A1931, #0E2F5B);
-            color: white;
-            padding: 32px 20px 24px 20px;
-            text-align: center;
-            position: relative;
-            border-bottom: 2px solid #C9A86A;
-        }
-        .logo {
-            font-size: 26px;
-            font-weight: 800;
-            letter-spacing: 0.18em;
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            color: #F9E7B0;
-        }
-        .tagline {
-            font-size: 11px;
-            letter-spacing: 0.36em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.75);
-        }
-        .card-body {
-            padding: 24px 20px 28px 20px;
-            text-align: center;
-            background: #ffffff;
-        }
-        .profile-name {
-            font-size: 20px;
-            font-weight: 700;
-            color: #0A1931;
-            margin-bottom: 4px;
-            letter-spacing: -0.02em;
-        }
-        .profile-title {
-            font-size: 12.5px;
-            color: #C9A86A;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-        }
-        .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 20px;
+            justify-content: space-between;
+            padding: 24px 16px;
         }
-        .btn {
+        /* Elementos decorativos de fondo similares al diseño de Vero */
+        .bg-curves {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: 
+                radial-gradient(circle at 80% 20%, rgba(212,175,55,0.15) 0%, transparent 40%),
+                linear-gradient(135deg, transparent 40%, rgba(212,175,55,0.08) 100%);
+            z-index: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding-top: 10px;
+        }
+        .est-text {
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            color: #d4af37;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        .brand-logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: #f9e7b0;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(212,175,55,0.3);
+            margin-bottom: 2px;
+        }
+        .brand-sub {
+            font-size: 11px;
+            color: #a3b8cc;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+        
+        /* Tarjeta central flotante */
+        .card-box {
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(135deg, #fffcf5 0%, #f4ebd0 100%);
+            border-radius: 24px;
+            padding: 22px 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5), inset 0 0 0 1.5px rgba(212,175,55,0.6);
+            color: #0a1931;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        .profile-name {
+            font-size: 19px;
+            font-weight: 800;
+            text-align: center;
+            color: #0a1931;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        .profile-title {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-align: center;
+            color: #8c733a;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 16px;
+        }
+        
+        /* Filas de información interactiva */
+        .info-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .info-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: #f8fafc;
-            border: 1.5px solid rgba(10,25,49,0.1);
-            padding: 13px 18px;
-            border-radius: 14px;
+            gap: 12px;
+            background: rgba(255,255,255,0.85);
+            border: 1px solid rgba(212,175,55,0.3);
+            padding: 11px 14px;
+            border-radius: 12px;
             text-decoration: none;
-            color: #0A1931;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.25s ease;
-            box-shadow: 0 2px 6px rgba(10,25,49,0.06);
+            color: #0a1931;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
         }
-        .btn:hover {
-            background: #f1f5f9;
+        .info-item:hover {
+            background: #ffffff;
+            border-color: #d4af37;
             transform: translateY(-1px);
         }
-        .btn-whatsapp {
+        .info-item.whatsapp-btn {
             background: #25d366;
             color: white;
             border-color: #25d366;
+            font-weight: 700;
+            justify-content: center;
             box-shadow: 0 4px 12px rgba(37,211,102,0.3);
         }
-        .btn-whatsapp:hover {
+        .info-item.whatsapp-btn:hover {
             background: #22bf5b;
         }
-        .btn-call {
-            background: #0A1931;
-            color: white;
-            border-color: #0A1931;
-            box-shadow: 0 4px 12px rgba(10,25,49,0.25);
+        .info-icon {
+            font-size: 16px;
+            width: 24px;
+            text-align: center;
         }
-        .btn-call:hover {
+        .info-text {
+            font-size: 12.5px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        /* Redes sociales en miniatura */
+        .social-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .soc-pill {
+            flex: 1;
+            background: #0a1931;
+            color: #f9e7b0;
+            text-decoration: none;
+            text-align: center;
+            padding: 8px 4px;
+            border-radius: 8px;
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background 0.2s;
+        }
+        .soc-pill:hover {
             background: #11294f;
         }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 22px;
-        }
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #0A1931;
-            font-weight: 700;
-            font-size: 13px;
-            border: 1.5px solid rgba(10,25,49,0.1);
-            transition: all 0.2s;
-        }
-        .social-icon:hover {
-            background: #0A1931;
-            color: #F9E7B0;
-            border-color: #0A1931;
-        }
-        .qr-section {
-            background: #fcfbf9;
-            padding: 14px;
-            border-radius: 18px;
-            border: 1.5px dashed rgba(201,168,106,0.4);
-            display: inline-block;
-            margin-top: 4px;
-        }
-        .qr-section img {
-            width: 120px;
-            height: 120px;
-            display: block;
-            margin: 0 auto 6px auto;
-            border-radius: 8px;
-        }
-        .qr-text {
-            font-size: 11px;
-            color: #64748b;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-        }
-        .footer {
-            background: #f8fafc;
+
+        /* Sección del Código QR inferior */
+        .qr-container-bottom {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px dashed rgba(212, 175, 55, 0.4);
+            border-radius: 20px;
             padding: 10px;
             text-align: center;
-            font-size: 10.5px;
-            color: #64748b;
-            border-top: 1px solid rgba(10,25,49,0.06);
-            letter-spacing: 0.05em;
+            margin-top: 12px;
+            backdrop-filter: blur(5px);
+        }
+        .qr-container-bottom img {
+            width: 90px;
+            height: 90px;
+            display: block;
+            margin: 0 auto 4px auto;
+            border-radius: 6px;
+        }
+        .qr-label {
+            font-size: 9.5px;
+            color: #d4af37;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <div class="card-container">
-        <div class="card-header">
-            <div class="logo">Beta Azul</div>
-            <div class="tagline">Agencia de Viajes Digital</div>
+    <div class="phone-frame">
+        <div class="bg-curves"></div>
+        
+        <!-- Cabecera artística -->
+        <div class="header-content">
+            <div class="est-text">EST. 2024 • LUJO Y TURISMO</div>
+            <div class="brand-logo-text">Beta Azul</div>
+            <div class="brand-sub">Viajes Turísticos</div>
         </div>
-        <div class="card-body">
+        
+        <!-- Caja central con el diseño exacto de Vero -->
+        <div class="card-box">
             <div class="profile-name">Verónica Hernández Echeverría</div>
-            <div class="profile-title">Directora General</div>
+            <div class="profile-title">DIRECTORA GENERAL</div>
             
-            <div class="btn-group">
-                <a href="tel:+52 244 447 0237" class="btn btn-call">
-                    📞 Llamar Directamente
+            <div class="info-rows">
+                <a href="tel:+52 244 447 0237" class="info-item">
+                    <span class="info-icon">📞</span>
+                    <span class="info-text">TEL: +52 244 447 0237</span>
                 </a>
-                <a href="https://wa.me/522444470237?text=Hola Verónica, vi la tarjeta digital de Beta Azul y me gustaría recibir asesoría de viajes." class="btn btn-whatsapp" target="_blank">
-                    💬 Enviar WhatsApp
+                
+                <a href="https://wa.me/522444470237?text=Hola Verónica, vi la tarjeta digital de Beta Azul y me gustaría recibir asesoría de viajes." class="info-item whatsapp-btn" target="_blank">
+                    <span class="info-icon">💬</span>
+                    <span class="info-text">ENVIAR WHATSAPP</span>
+                </a>
+
+                <a href="mailto:betaazulviajes@gmail.com" class="info-item">
+                    <span class="info-icon">✉️</span>
+                    <span class="info-text">betaazulviajes@gmail.com</span>
+                </a>
+                
+                <a href="https://viajesbetaazul.wixsite.com/beta-azul" class="info-item" target="_blank">
+                    <span class="info-icon">🌐</span>
+                    <span class="info-text">viajesbetaazul.wixsite.com/beta-azul</span>
                 </a>
             </div>
 
-            <div class="social-links">
-                <a href="https://facebook.com" class="social-icon" target="_blank" title="Facebook">FB</a>
-                <a href="https://instagram.com" class="social-icon" target="_blank" title="Instagram">IG</a>
-                <a href="https://tiktok.com" class="social-icon" target="_blank" title="TikTok">TK</a>
-                <a href="https://youtube.com" class="social-icon" target="_blank" title="YouTube">YT</a>
-            </div>
-
-            <div class="qr-section">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://danorov2915.github.io/betaazul/vero.html" alt="Código QR de la tarjeta">
-                <div class="qr-text">Escanea para compartir tarjeta</div>
+            <div class="social-row">
+                <a href="https://facebook.com" class="soc-pill" target="_blank">Facebook</a>
+                <a href="https://instagram.com" class="soc-pill" target="_blank">Instagram</a>
+                <a href="https://tiktok.com" class="soc-pill" target="_blank">TikTok</a>
+                <a href="https://youtube.com" class="soc-pill" target="_blank">YouTube</a>
             </div>
         </div>
-        <div class="footer">
-            ATLIXCO, PUEBLA • 100% DIGITAL
+
+        <!-- Código QR para compartir de celular a celular -->
+        <div class="qr-container-bottom">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://danorov2915.github.io/betaazul/vero.html" alt="QR Código">
+            <div class="qr-label">Escanea para compartir tarjeta</div>
         </div>
     </div>
 </body>
