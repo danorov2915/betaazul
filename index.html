@@ -9,23 +9,23 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         body {
-            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            background: linear-gradient(135deg, #050E22 0%, #0A1931 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            color: #333;
+            padding: 16px;
+            color: #0A1931;
         }
         .card-container {
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             background: #ffffff;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-radius: 28px;
+            box-shadow: 0 28px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(201,168,106,0.35);
             overflow: hidden;
             position: relative;
             animation: fadeIn 0.8s ease-out;
@@ -35,47 +35,52 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .card-header {
-            background: linear-gradient(135deg, #0284c7, #0369a1);
+            background: linear-gradient(135deg, #0A1931, #0E2F5B);
             color: white;
-            padding: 30px 20px;
+            padding: 32px 20px 24px 20px;
             text-align: center;
             position: relative;
+            border-bottom: 2px solid #C9A86A;
         }
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            letter-spacing: 0.18em;
+            margin-bottom: 6px;
             text-transform: uppercase;
+            color: #F9E7B0;
         }
         .tagline {
-            font-size: 13px;
-            opacity: 0.9;
-            letter-spacing: 1px;
+            font-size: 11px;
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.75);
         }
         .card-body {
-            padding: 30px 20px;
+            padding: 24px 20px 28px 20px;
             text-align: center;
+            background: #ffffff;
         }
         .profile-name {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 5px;
+            color: #0A1931;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
         }
         .profile-title {
-            font-size: 14px;
-            color: #0284c7;
+            font-size: 12.5px;
+            color: #C9A86A;
             font-weight: 600;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.18em;
         }
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 25px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
         .btn {
             display: flex;
@@ -83,91 +88,93 @@
             justify-content: center;
             gap: 10px;
             background: #f8fafc;
-            border: 2px solid #e2e8f0;
-            padding: 14px 20px;
-            border-radius: 12px;
+            border: 1.5px solid rgba(10,25,49,0.1);
+            padding: 13px 18px;
+            border-radius: 14px;
             text-decoration: none;
-            color: #1e293b;
+            color: #0A1931;
             font-weight: 600;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            font-size: 14px;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(10,25,49,0.06);
         }
         .btn:hover {
             background: #f1f5f9;
-            border-color: #cbd5e1;
-            transform: translateY(-2px);
+            transform: translateY(-1px);
         }
         .btn-whatsapp {
             background: #25d366;
             color: white;
             border-color: #25d366;
+            box-shadow: 0 4px 12px rgba(37,211,102,0.3);
         }
         .btn-whatsapp:hover {
             background: #22bf5b;
-            border-color: #22bf5b;
         }
         .btn-call {
-            background: #0284c7;
+            background: #0A1931;
             color: white;
-            border-color: #0284c7;
+            border-color: #0A1931;
+            box-shadow: 0 4px 12px rgba(10,25,49,0.25);
         }
         .btn-call:hover {
-            background: #0369a1;
-            border-color: #0369a1;
+            background: #11294f;
         }
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 25px;
+            gap: 12px;
+            margin-bottom: 22px;
         }
         .social-icon {
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background: #f1f5f9;
+            background: #f8fafc;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: #475569;
-            font-weight: bold;
-            font-size: 14px;
-            border: 1px solid #e2e8f0;
+            color: #0A1931;
+            font-weight: 700;
+            font-size: 13px;
+            border: 1.5px solid rgba(10,25,49,0.1);
             transition: all 0.2s;
         }
         .social-icon:hover {
-            background: #0284c7;
-            color: white;
-            border-color: #0284c7;
+            background: #0A1931;
+            color: #F9E7B0;
+            border-color: #0A1931;
         }
         .qr-section {
-            background: #f8fafc;
-            padding: 15px;
-            border-radius: 16px;
-            border: 1px dashed #cbd5e1;
+            background: #fcfbf9;
+            padding: 14px;
+            border-radius: 18px;
+            border: 1.5px dashed rgba(201,168,106,0.4);
             display: inline-block;
-            margin-top: 10px;
+            margin-top: 4px;
         }
         .qr-section img {
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             display: block;
-            margin: 0 auto 8px auto;
+            margin: 0 auto 6px auto;
+            border-radius: 8px;
         }
         .qr-text {
-            font-size: 12px;
-            color: #64748b;
-            font-weight: 500;
-        }
-        .footer {
-            background: #f1f5f9;
-            padding: 12px;
-            text-align: center;
             font-size: 11px;
             color: #64748b;
-            border-top: 1px solid #e2e8f0;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .footer {
+            background: #f8fafc;
+            padding: 10px;
+            text-align: center;
+            font-size: 10.5px;
+            color: #64748b;
+            border-top: 1px solid rgba(10,25,49,0.06);
+            letter-spacing: 0.05em;
         }
     </style>
 </head>
@@ -198,12 +205,12 @@
             </div>
 
             <div class="qr-section">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://betaazul.com/daniel" alt="Código QR de la tarjeta">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://danorov2915.github.io/betaazul/" alt="Código QR de la tarjeta">
                 <div class="qr-text">Escanea para compartir tarjeta</div>
             </div>
         </div>
         <div class="footer">
-            Atlixco, Puebla, México • 100% Digital
+            ATLIXCO, PUEBLA • 100% DIGITAL
         </div>
     </div>
 </body>
